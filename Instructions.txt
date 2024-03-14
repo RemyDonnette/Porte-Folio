@@ -1,0 +1,7 @@
+Créer un repository sur Github
+Créer un projet (dossier)
+Entrer la commande git init dans gitbash
+
+git add . (ou git add "nom du fichier")
+git commit -M "initial commit"
+git push -U -F origin master
