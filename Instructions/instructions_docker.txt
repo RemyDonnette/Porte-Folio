@@ -1,0 +1,27 @@
+COMMANDES
+
+docker run <nom de l'image>		Lance le container à partir de l'image (et la télécharge si elle n'existe pas)
+docker rm <nom du container>		Supprime le container
+docker ps 				Liste les containters actifs (-a affichera aussi les inactifs)
+docker volume create <nom du volume>	Crée un volume
+docker volume rm <nom du volume>	Supprime le volume
+
+
+ARGUMENTS
+
+-d	--detach 	(permet de détacher la commande du terminal)
+-p	--port 		(permet de définir le port de connexion) 
+-v	--volume 	(permet d'ouvrir un volume en même temps qu'un container)
+-n	--name 		(permet de nomer un container)
+
+port
+-p 	<numero du port>:<port par defaut (80)>
+
+volume
+Nommés		-v <nom du volume>:/usr/share/<nom de l'image>/html
+Bind monts	-v/ /<nom du volume>:/usr/share/nginx/html
+
+
+EXEMPLE
+
+docker run nginx -d -p 8080:80 -v volumesite:/usr/share/nginx/html -n monsite
