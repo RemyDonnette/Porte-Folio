@@ -42,10 +42,10 @@ port
 -p 	<numero du port>:80
 
 volume
-Nommés		-v <nom du volume>:/usr/share/<nom de l'image>/html
+Nommés		-v <nom du volume>:/usr/share/nginx/html
 Bind monts	-v ${PWD}/<nom du volume>:/usr/share/nginx/html (sur powershell)
 
 
 EXEMPLE
 
-docker run nginx -d -p 8080:80 -v ${PWD}/app:/usr/share/nginx/html -n monsite
+docker run nginx -d -p 8080:80 -v ${PWD}/app:/usr/share/nginx/html --name monsite
