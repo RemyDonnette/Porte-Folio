@@ -1,0 +1,51 @@
+COMMANDES
+
+containers
+docker run <nom de l'image>			Lance le container à partir de l'image (et la télécharge si elle n'existe pas)
+docker stop <nom du container>			Arrete le container
+docker rm <nom du container>			Supprime le container
+docker inspect <nom du container>		Inspecte le container
+docker ps 					Liste les containters actifs (-a affichera aussi les inactifs)
+(note: les <nom du containter> peuvent être remplacées par les 3 premiers caractères de l'ID)
+
+images
+docker image rm	<nom de l'image>		Supprime une image
+docker image ls					Liste les images
+
+volumes
+docker volume create <nom du volume>		Crée un volume
+docker volume rm <nom du volume>		Supprime le volume
+docker volume ls				liste les volumes
+
+reseaux
+docker network create				Crée un network
+docker network rm				supprime le network
+docker network ls				Liste les networks
+
+bash
+docker exec -ti <3 char de l'ID> bash		Execute bash dans le container
+puis dans le @root
+apt-get update					Met à jour les applications
+apt-get nano					Installe nano dans le container
+nano /usr/share/nginx/html/index.html		Ouvre le fichier html d'nginx avec nano
+
+
+ARGUMENTS
+
+--detach	-d	(permet de détacher la commande du terminal)
+--publish	-p	(permet de définir le port de connexion) 
+--volume	-v	(permet d'ouvrir un volume en même temps qu'un container)
+--name			(permet de nommer)
+--network	-net	(permet d'ouvrir sur un serveur)
+
+port
+-p 	<numero du port>:80
+
+volume
+Nommés		-v <nom du volume>:/usr/share/<nom de l'image>/html
+Bind monts	-v ${PWD}/<nom du volume>:/usr/share/nginx/html (sur powershell)
+
+
+EXEMPLE
+
+docker run nginx -d -p 8080:80 -v ${PWD}/app:/usr/share/nginx/html -n monsite
