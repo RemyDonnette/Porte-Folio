@@ -1,3 +1,31 @@
+/* Reset CSS */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: Source Code Pro;
+}
+ol, ul {
+	list-style: none;
+}
+img {
+    max-width: 100%;
+}
+
+/* Header */
+
+header {
+    background: url(images/d3uUC_nqTY21wpqTSCkE4A.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.75;
+}
+
 h1 {
-    color: red ;
+    font-size: 10em;
+    color: white;
 }
