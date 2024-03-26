@@ -15,17 +15,150 @@ img {
     max-width: 100%;
 }
 
-/* Header */
+:root {
+    --color1: black;
+    --color2:
+}
+
+/* HEADER */
 
 header {
-    background: url(images/d3uUC_nqTY21wpqTSCkE4A.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.75;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid black 1px;
+}
+
+#logo {
+    max-width: 15em;
+}
+
+nav ul {
+    display: flex;
+    gap: 3rem;
+    font-size: 2rem;
+    padding-right: 1rem;
+}
+
+.fa-bars, #toogle {
+    display: none;
+}
+
+/* MAIN */
+
+section {
+    border: solid black 1px;
+}
+
+main section:nth-child(1), main section:nth-child(2), main section:nth-child(3) ul, main section:nth-child(4) div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+main section:nth-child(3) {
+    flex-wrap: wrap;
+}
+
+#photo_profil {
+    border-radius: 50%;
+    max-width: 35em;
+}
+
+h1, h2 {
+    font-family: Prosto One;
 }
 
 h1 {
-    font-size: 10em;
-    color: white;
+    font-size: 4rem;
+    align-items: center;
+    font-weight: 700;
+}
+
+h2, strong {
+    font-size: 3rem;
+}
+
+#bouton_retour {
+    text-align: center;
+}
+
+/* RESPONSIVE TABLETTE */
+
+@media screen and (max-width:1200px) {
+
+    #logo {
+        max-width: 12em;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2, nav ul, strong{
+        font-size: 1.5rem;
+    }
+
+    #photo_profil {
+        max-width: 28em;
+    }
+}
+
+/* RESPONSIVE SMARTPHONE */
+
+@media screen and (max-width:850px){
+
+    #logo {
+        max-width: 9em;
+    }
+
+    h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    h2, strong {
+        font-size: 1.7em;
+    }
+
+    .fa-bars {
+        display: flex;
+        padding-right: 1rem;
+        font-size: 4em;
+    }
+
+    #toggle:checked + ul {
+        display: flex;
+        position: fixed;
+        background: rgb(104, 36, 36);
+        height: 100vh;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #photo_profil {
+        max-width: 22em;
+    }
+
+    main section:nth-child(1) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main section:nth-child(2) img {
+        display: none;
+    }
+
+    main section:nth-child(4) div {
+        flex-wrap: wrap-reverse;
+    }
+
 }
