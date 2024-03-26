@@ -40,7 +40,7 @@ nav ul {
     padding-right: 1rem;
 }
 
-.fa-bars {
+.fa-bars, #toogle {
     display: none;
 }
 
@@ -103,7 +103,6 @@ h2, strong {
     #photo_profil {
         max-width: 28em;
     }
-
 }
 
 /* RESPONSIVE SMARTPHONE */
@@ -123,14 +122,26 @@ h2, strong {
         font-size: 1.7em;
     }
 
-    nav ul {
-        display: none;
-    }
-
     .fa-bars {
         display: flex;
         padding-right: 1rem;
         font-size: 4em;
+    }
+
+    #toggle:checked + ul {
+        display: flex;
+        position: fixed;
+        background: rgb(104, 36, 36);
+        height: 100vh;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav ul {
+        display: none;
     }
 
     #photo_profil {
