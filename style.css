@@ -144,7 +144,7 @@ h2, strong {
     position: relative;
     z-index: 10;
   }
-  #burger_button:checked + ul ul .slash {
+  #burger_button:checked + ul .slash {
     display: none;
   }
   h1 {
