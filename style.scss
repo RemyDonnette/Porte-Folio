@@ -1,0 +1,165 @@
+// APPELLE LES FICHIERS .SCSS DANS PARTIALS
+@use "./partials/1resetCSS";
+@use "./partials/header";
+
+/* Reset CSS */
+
+
+body {
+    /* background: rgb(237,237,237);
+    background: radial-gradient(circle, rgba(237,237,237,1) 65%, rgba(198,198,198,1) 100%); */
+    background-image: url(images/fond.jpg);
+    background-position: right;
+}
+
+
+:root {
+    --color1: #403F4C;
+    --color2: #C6C6C6;
+    --color3: #2;
+    --color4: #c6e0ff;
+}
+
+
+
+/* MAIN */
+
+section {
+    /* border: solid black 1px; */
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+main section:nth-child(1), main section:nth-child(2), main section:nth-child(3) ul, main section:nth-child(4) div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+main section:nth-child(3) {
+    flex-wrap: wrap;
+}
+
+#photo_profil {
+    border-radius: 50%;
+    max-width: 35em;
+}
+
+h1, h2 {
+    font-family: Prosto One;
+}
+
+h1 {
+    font-size: 4rem;
+    align-items: center;
+    font-weight: 700;
+}
+
+h2, strong {
+    font-size: 3rem;
+}
+
+strong {
+    text-align: center;
+}
+
+#bouton_retour {
+    text-align: center;
+}
+
+
+
+
+
+#test:checked + #testing {
+    display: none;
+}
+
+
+
+/* RESPONSIVE TABLETTE */
+
+@media screen and (max-width:1200px) {
+
+    #logo {
+        max-width: 12em;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2, nav ul, strong{
+        font-size: 1.5rem;
+    }
+
+    #photo_profil {
+        max-width: 28em;
+    }
+}
+
+/* RESPONSIVE SMARTPHONE */
+
+@media screen and (max-width:850px){
+
+    #logo {
+        max-width: 9em;
+    }
+    
+    .fa-bars {
+        display: flex;
+        padding: 1rem;
+        margin: 1rem;
+        font-size: 3em;
+        border: 1px solid black;
+        border-radius: 50%;
+        box-shadow: 2px 2px 2px
+    }
+
+    .fa-bars:active {
+        box-shadow: none;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #burger_button:checked + ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        ul .slash {
+            display: none;
+        } 
+    }
+
+    h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    h2, strong {
+        font-size: 1.7em;
+    }
+
+    #photo_profil {
+        max-width: 22em;
+    }
+
+    main section:nth-child(1) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main section:nth-child(2) img {
+        display: none;
+    }
+
+    main section:nth-child(4) div {
+        flex-wrap: wrap-reverse;
+    }
+
+}
